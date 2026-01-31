@@ -1,0 +1,384 @@
+.csv-import-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.csv-import-dialog {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.csv-import-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.csv-import-dialog-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #232f3e;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: #f0f0f0;
+}
+
+.csv-import-dialog-content {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.csv-import-step h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #232f3e;
+}
+
+.file-upload-area {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #fafafa;
+}
+
+.file-upload-area:hover {
+  border-color: #ff9900;
+  background-color: #fff8f0;
+}
+
+.file-upload-area.dragging {
+  border-color: #ff9900;
+  background-color: #fff8f0;
+  border-style: solid;
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.file-upload-area p {
+  margin: 8px 0;
+  color: #232f3e;
+  font-size: 16px;
+}
+
+.upload-subtext {
+  font-size: 14px !important;
+  color: #666 !important;
+}
+
+.selected-file {
+  margin-top: 16px !important;
+  font-weight: 600;
+  color: #ff9900 !important;
+}
+
+.template-button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.template-button:hover {
+  border-color: #ff9900;
+  color: #ff9900;
+}
+
+.error-message {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #fff0f0;
+  border: 1px solid #ffcccc;
+  border-radius: 4px;
+  color: #cc0000;
+  font-size: 14px;
+}
+
+.validation-errors {
+  margin-bottom: 24px;
+}
+
+.validation-errors h3 {
+  margin: 0 0 12px 0;
+  color: #cc0000;
+  font-size: 18px;
+}
+
+.validation-errors p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.error-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 16px 0;
+  padding: 12px;
+  background-color: #fff8f8;
+  border-radius: 4px;
+}
+
+.error-item {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-left: 3px solid #cc0000;
+  font-size: 14px;
+}
+
+.error-item:last-child {
+  margin-bottom: 0;
+}
+
+.error-help {
+  font-weight: 600;
+  color: #232f3e;
+}
+
+.csv-preview h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #232f3e;
+}
+
+.preview-table-container {
+  overflow-x: auto;
+  margin-bottom: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.preview-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.preview-table thead {
+  background-color: #f5f5f5;
+}
+
+.preview-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #232f3e;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.preview-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+.preview-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.preview-note {
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+}
+
+.import-summary {
+  padding: 16px;
+  background-color: #f0f8ff;
+  border-radius: 4px;
+  border: 1px solid #cce5ff;
+}
+
+.import-summary h4 {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #232f3e;
+}
+
+.import-summary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.import-summary li {
+  padding: 4px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.importing-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.importing-state h3 {
+  margin: 0 0 24px 0;
+  font-size: 18px;
+  color: #232f3e;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #ff9900;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.complete-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-icon {
+  font-size: 64px;
+  color: #00a000;
+  margin-bottom: 16px;
+}
+
+.complete-state h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #232f3e;
+}
+
+.complete-state p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.csv-import-dialog-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancel-button,
+.import-button {
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.cancel-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.cancel-button:hover {
+  border-color: #999;
+  background-color: #f5f5f5;
+}
+
+.import-button {
+  background-color: #ff9900;
+  color: white;
+}
+
+.import-button:hover {
+  background-color: #ec7211;
+}
+
+.import-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .csv-import-dialog {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .csv-import-dialog-header {
+    padding: 16px;
+  }
+
+  .csv-import-dialog-content {
+    padding: 16px;
+  }
+
+  .file-upload-area {
+    padding: 30px 20px;
+  }
+
+  .preview-table {
+    font-size: 12px;
+  }
+
+  .preview-table th,
+  .preview-table td {
+    padding: 8px;
+  }
+}

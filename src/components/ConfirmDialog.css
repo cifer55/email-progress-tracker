@@ -1,0 +1,126 @@
+.confirm-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.confirm-dialog {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.confirm-dialog-title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--amazon-text-primary);
+}
+
+.confirm-dialog-message {
+  margin: 0 0 24px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--amazon-text-secondary);
+  white-space: pre-wrap;
+}
+
+.confirm-dialog-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.confirm-dialog-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.confirm-dialog-button-cancel {
+  background-color: var(--amazon-bg-white);
+  color: var(--amazon-text-primary);
+  border-color: var(--amazon-border);
+}
+
+.confirm-dialog-button-cancel:hover {
+  background-color: var(--amazon-bg-light);
+}
+
+.confirm-dialog-button-confirm {
+  background-color: var(--amazon-orange);
+  color: var(--amazon-text-primary);
+}
+
+.confirm-dialog-button-confirm:hover {
+  background-color: var(--amazon-orange-dark);
+}
+
+.confirm-dialog-button-destructive {
+  background-color: var(--amazon-error);
+  color: white;
+}
+
+.confirm-dialog-button-destructive:hover {
+  background-color: #A00000;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .confirm-dialog {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .confirm-dialog-title {
+    font-size: 18px;
+  }
+
+  .confirm-dialog-message {
+    font-size: 13px;
+  }
+
+  .confirm-dialog-actions {
+    flex-direction: column-reverse;
+  }
+
+  .confirm-dialog-button {
+    width: 100%;
+  }
+}

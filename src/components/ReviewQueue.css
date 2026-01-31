@@ -1,0 +1,264 @@
+/**
+ * ReviewQueue Styles
+ * Amazon design system colors and spacing
+ */
+
+.review-queue {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.review-queue-empty {
+  text-align: center;
+  padding: 48px 16px;
+  color: #565959;
+}
+
+.review-queue-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.review-queue-empty p {
+  margin: 8px 0;
+}
+
+.review-queue-loading {
+  text-align: center;
+  padding: 48px 16px;
+  color: #565959;
+}
+
+/* Email Card */
+.review-email-card {
+  background-color: #ffffff;
+  border: 1px solid #D5D9D9;
+  border-radius: 8px;
+  padding: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.review-email-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-email-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.review-email-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.review-email-from {
+  font-weight: 600;
+  color: #0F1111;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.review-email-subject {
+  color: #0F1111;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.review-email-date {
+  font-size: 12px;
+  color: #565959;
+}
+
+.review-email-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.review-email-body {
+  color: #0F1111;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  max-height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.review-email-body-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, #ffffff);
+}
+
+/* Suggested Matches */
+.review-suggested-matches {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #E7E9EC;
+}
+
+.review-suggested-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #565959;
+  margin-bottom: 8px;
+}
+
+.review-match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.review-match-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #F7F8F8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.review-match-item:hover {
+  background-color: #E7E9EC;
+}
+
+.review-match-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.review-match-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F1111;
+  margin-bottom: 2px;
+}
+
+.review-match-path {
+  font-size: 11px;
+  color: #565959;
+}
+
+.review-match-confidence {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.review-match-confidence-high {
+  background-color: #D5F5E3;
+  color: #067D62;
+}
+
+.review-match-confidence-medium {
+  background-color: #FFF3CD;
+  color: #C7511F;
+}
+
+.review-match-confidence-low {
+  background-color: #F8D7DA;
+  color: #B12704;
+}
+
+/* Manual Link Form */
+.review-manual-link {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #E7E9EC;
+}
+
+.review-manual-link-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #565959;
+  margin-bottom: 8px;
+}
+
+.review-manual-link-form {
+  display: flex;
+  gap: 8px;
+}
+
+.review-manual-link-select {
+  flex: 1;
+  padding: 6px 12px;
+  border: 1px solid #D5D9D9;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #0F1111;
+  background-color: #ffffff;
+}
+
+.review-manual-link-select:focus {
+  outline: none;
+  border-color: #007185;
+  box-shadow: 0 0 0 3px rgba(0, 113, 133, 0.1);
+}
+
+/* Buttons */
+.review-button {
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  white-space: nowrap;
+}
+
+.review-button-primary {
+  background-color: #FF9900;
+  color: #0F1111;
+}
+
+.review-button-primary:hover {
+  background-color: #EC7211;
+}
+
+.review-button-secondary {
+  background-color: #ffffff;
+  color: #0F1111;
+  border: 1px solid #D5D9D9;
+}
+
+.review-button-secondary:hover {
+  background-color: #F7F8F8;
+  border-color: #879596;
+}
+
+.review-button-danger {
+  background-color: #ffffff;
+  color: #B12704;
+  border: 1px solid #D5D9D9;
+}
+
+.review-button-danger:hover {
+  background-color: #FFF3F3;
+  border-color: #B12704;
+}
+
+.review-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Load More */
+.review-load-more {
+  text-align: center;
+  padding: 16px;
+}

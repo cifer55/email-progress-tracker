@@ -1,0 +1,58 @@
+.gantt-chart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--amazon-bg-white);
+  border: 1px solid var(--amazon-border);
+  border-radius: 8px;
+  /* Enable smooth scrolling on touch devices */
+  -webkit-overflow-scrolling: touch;
+}
+
+.gantt-chart-canvas {
+  display: block;
+  cursor: default;
+  /* Prevent touch callout on mobile */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.gantt-chart-empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--amazon-text-secondary);
+  padding: 1rem;
+}
+
+.gantt-chart-empty p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.gantt-chart-empty p:first-child {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--amazon-text-primary);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .gantt-chart-container {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .gantt-chart-empty p {
+    font-size: 12px;
+  }
+  
+  .gantt-chart-empty p:first-child {
+    font-size: 14px;
+  }
+}

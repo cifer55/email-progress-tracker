@@ -1,0 +1,109 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--amazon-navy);
+  border-bottom: 1px solid var(--amazon-navy-light);
+  flex-wrap: wrap;
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toolbar-section-title {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--amazon-bg-white);
+  margin-right: 0.5rem;
+}
+
+.toolbar-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--amazon-orange);
+  color: var(--amazon-text-primary);
+  border: 1px solid var(--amazon-orange-dark);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  white-space: nowrap;
+  /* Touch-friendly minimum size */
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.toolbar-button:hover {
+  background-color: var(--amazon-orange-dark);
+  border-color: var(--amazon-orange-dark);
+  color: var(--amazon-bg-white);
+}
+
+.toolbar-button:active {
+  background-color: #A84300;
+  transform: translateY(1px);
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 2rem;
+  background-color: var(--amazon-navy-light);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .toolbar-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .toolbar-section-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+
+  .toolbar-button {
+    flex: 1;
+    min-width: 80px;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .toolbar-divider {
+    display: none;
+  }
+}
+
+/* Primary button style for Create button */
+.toolbar-button-primary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--amazon-orange);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.625rem 1.5rem;
+  min-width: 120px;
+}
+
+.toolbar-button-primary:hover {
+  background-color: var(--amazon-orange-dark);
+  color: white;
+}

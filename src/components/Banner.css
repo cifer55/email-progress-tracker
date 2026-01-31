@@ -1,0 +1,78 @@
+.banner {
+  padding: 12px 16px;
+  margin: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner-warning {
+  background-color: #FEF3E2;
+  border: 1px solid var(--amazon-warning);
+  color: #8B5A00;
+}
+
+.banner-error {
+  background-color: #FEF2F2;
+  border: 1px solid var(--amazon-error);
+  color: var(--amazon-error);
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.banner-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.banner-message {
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.banner-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.banner-warning .banner-close {
+  color: #8B5A00;
+}
+
+.banner-error .banner-close {
+  color: var(--amazon-error);
+}
+
+.banner-close:hover {
+  opacity: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .banner {
+    margin: 4px;
+    padding: 10px 12px;
+  }
+
+  .banner-message {
+    font-size: 13px;
+  }
+}
